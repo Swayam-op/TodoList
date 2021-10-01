@@ -1,45 +1,74 @@
-body{
+body {
     margin: 0 0;
 }
-.screen{
+
+.screen {
     /* margin: 0px 0px ; */
-    
+
     width: 100%;
     height: 100vh;
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-       
+    /* background-color: #4158D0; */
+    /* background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
+    background-color: #cab0f0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.25'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
 }
-.container{
+
+.container {
     max-width: 1080px;
     /* border: 1px solid black; */
     margin: 0 auto;
     padding-top: 5em;
 
 }
-.day{
+
+.Todo-heading {
+    font-size: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Todo-cat {
+    font-size: 1.5rem;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+
+.cat_txt {
+    display: block;
+}
+
+.day {
     width: 100%;
     /* border: 1px solid orange; */
     display: flex;
     justify-content: center;
 
 }
-.day div{
+
+.day div {
     padding: .6em;
-    
+
     background-color: aliceblue;
     color: rgb(204, 67, 135);
     text-align: center;
     font-size: 20px;
     border-right: 3px solid rgb(204, 67, 135);
-    border-radius: 5px 0 5px 0;  
-    cursor: pointer; 
+    border-radius: 5px 0 5px 0;
+    cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 10px;
 }
-.day .tomo{
-    border-right:1px solid white;
+
+.day .tomo {
+    border-right: 1px solid white;
 }
-.list_container{
+
+.list_container {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -48,7 +77,8 @@ body{
     margin-top: 40px;
     /* border: 1px solid green; */
 }
-.type_box{
+
+.type_box {
     width: 480px;
     background-color: aliceblue;
     padding-left: 0.5em;
@@ -60,54 +90,57 @@ body{
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
     /* border: 1px solid black; */
 }
-.type_box input{
-    border:none;
+
+.type_box input {
+    border: none;
     outline: none;
     background-color: aliceblue;
-    color: rgb(204, 67, 135);
+    color: rgb(0, 0, 0);
     width: 420px;
- 
+
     height: 35px;
     font-size: 17px;
     border-radius: 15px;
-    font-family: cursive;
-    
+    font-family: 'Roboto', sans-serif;
+
     /* border: 1px solid red; */
 }
-.type_box .add{
-   display: inline-block;
-   /* border: 1px solid firebrick; */
-   position: absolute;
-   right: 10px;
-   font-size: 23px;
-   cursor: pointer;
+
+.type_box .add {
+    display: inline-block;
+    /* border: 1px solid firebrick; */
+    position: absolute;
+    right: 10px;
+    font-size: 23px;
+    cursor: pointer;
 }
 
-.task_container{
+.task_container {
     width: 500px;
     /* min-width: 380px; */
     /* border: 1px solid blue; */
-    
+
 }
 
-@media (max-width:416px)
-{
-    .task_container{
+@media (max-width:416px) {
+    .task_container {
         width: 390px;
         /* min-width: 380px; */
         /* border: 1px solid blue; */
-        
+
     }
-    .type_box{
+
+    .type_box {
         width: 385px;
     }
-    .type_box input{
+
+    .type_box input {
         width: 340px;
     }
 
 }
 
-.task_box{
+.task_box {
     margin-top: 20px;
     width: 100%;
     box-sizing: border-box;
@@ -115,52 +148,68 @@ body{
     padding: 0.6em;
     border-radius: 10px;
     background-color: rgb(48, 123, 189);
-    
+
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-   
+
 }
-.texts{
+
+.texts {
     /* border: 1px solid honeydew; */
- color: whitesmoke;
- font-family: cursive;
- font-size: 20px;
- flex-basis: 85%;
- 
+    color: whitesmoke;
+    font-family: cursive;
+    font-size: 20px;
+    flex-basis: 85%;
+
 }
-.icons{
+
+.icons {
     flex-basis: 15%;
     /* border: 1px solid blueviolet; */
     display: flex;
     justify-content: space-evenly;
 }
-.delete{
+
+.delete {
     cursor: pointer;
-    
+
 }
-.edit{
+
+.edit {
     cursor: pointer;
 }
-.removeall{
+
+.removeall {
     margin-top: 1.5em;
     font-size: 20px;
-    font-family: cursive;
+    font-family: 'Ubuntu', sans-serif;
     background-color: rgb(180, 21, 21);
     color: aliceblue;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-    
+    font-weight: 500;
     padding: 0.6em;
     border-radius: 5px;
     width: 140px;
     border: 1px solid red;
-    
+
     cursor: pointer;
     transition-property: background-color color;
     transition-duration: 0.4s;
     transition-timing-function: ease-in-out;
 }
-.removeall:hover{
-  background-color: aliceblue;
-  color:rgb(180, 21, 21) ;
 
+.removeall:hover {
+    background-color: aliceblue;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+
+footer {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    position: relative;
+    top: 195px;
 }
